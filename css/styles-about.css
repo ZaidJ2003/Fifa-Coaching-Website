@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #e7473c;
+    --primary-bg-color: #f0f0f0;
+    --light-color: white;
+    --pop-color: #ffba00;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, var(--primary-bg-color), var(--light-color));
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header, footer{
+    background-color:  #333 ;
+    color: white;
+}
+
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.right-indent{
+    padding-left: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 6rem 1fr 3rem; 
+    grid-template-areas: 
+    "header header "
+    "mid mid "
+    "footer footer ";
+}
+
+header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+}
+
+main {
+    grid-area: mid;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.head {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+} 
+
+nav a {
+    color: white;
+}
+
+nav a:hover, 
+nav a:active{
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+main {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    color:#333 ;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+} 
+
+.container{ 
+    min-height: 500px;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(17,12,46,0.8); 
+    max-height: 100%;
+    overflow-y: auto;
+    flex-basis: 300px;
+    max-width: 700px;
+    flex-grow: 1;
+    max-height: 600px;
+}
+
+.tab-box{
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgb(229,229,229);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tab-box .tab-btn {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab-box .tab-btn.active{
+    color: #e7473c;
+}
+
+.content-box {
+    padding: 20px;
+}
+
+.content-box .content{
+    display: none;
+} 
+
+.content-box .content.active {
+    display: block;
+}
+
+.content-box .content h2{ 
+    margin-bottom: 10px;
+}
+
+.line {
+    position: absolute;
+    /* top: 30%;
+    right: 25%;
+    width: 9%;
+    height: 5%;
+    background-color: #e7473c;
+    border-radius: 10px;
+    transition: all .3s ease-in-out; */
+}
+
+
+.container h1 {
+    color: black;
+    font-size: 36px;
+    font-weight: 50px;
+}
+
+.container h3 {
+    font-size: 30px;
+}
+
+.container p {
+    font-size: 25px;
+}
+
+.container-img {
+    flex-basis: 300px;
+    max-width: 500px;
+    flex-grow: 1;
+    max-height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.img-two {
+    flex-basis: 400px;
+    max-width: 35%;
+    flex-grow: 1;
+}
+
+.img-two p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.title {
+    font-weight: bold;
+    color: black;
+}
+
+.social-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    height: 6%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.social-footer .social-footer-icons ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 3rem; 
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+    margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+    font-size: 1.3rem;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: red;
+    color: white;
+}
+
+.fa-tiktok {
+    color: #111111;
+    filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+}
+
+.inline-img {
+    width: 1em; 
+    height: 1em; 
+    vertical-align: middle;
+    margin-left: 5px; 
+}
+

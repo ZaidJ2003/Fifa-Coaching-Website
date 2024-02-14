@@ -1,0 +1,382 @@
+:root {
+    --content-height: 0px;
+    --primary-color: #333;
+    --primary-bg-color: #f0f0f0;
+    --light-color: white;
+    --pop-color: #ffba00;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: helvetica, sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, var(--primary-bg-color), var(--light-color));
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header, footer{
+    background-color:  #333;
+    color: white;
+}
+
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.right-indent{
+    padding-left: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 6rem 1fr auto; 
+    grid-template-areas: 
+    "Header Header Header"
+    "main main main"
+    "Footer Footer Footer";
+}
+
+header{
+    grid-area: Header;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: .4fr 2.2fr .4fr; 
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+    "container-left Upper container-right"
+    "container-left Lower container-right";
+}
+
+.container-left {
+    grid-area: container-left;
+    padding-left: 10px;
+    background-color:  #6d6d6d;
+    height: 100%;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+.container-right {
+    grid-area: container-right;
+    /* position: relative; */
+    padding-left: 10px;
+    background-color:  #6d6d6d;
+    height: 100%;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+.carousel-container{
+    grid-area: Lower;
+    display: flex;
+    justify-content: center;
+    color: #333;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 30px; 
+    padding-top: 30px;
+}
+
+.container-content{ 
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(17,12,46,0.8); 
+    max-height:fit-content;
+    overflow-y: auto;
+    flex-basis: 300px;
+    max-width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.container-content h1{
+    font-size: 36px;
+    color: black;
+    font-weight: 100px;
+}
+
+h3{
+    font-size: 24px;
+    color: #555555;
+    align-items: center;
+}
+
+.container-content p{
+    font-size: 25px;
+}
+
+.text {
+    padding-top: 30px;
+}
+
+footer {
+    grid-area:Footer;
+}
+
+.head {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+} 
+
+nav a {
+    color: white;
+}
+
+nav a:hover, 
+nav a:active{
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.container h1{
+    margin-top: 10px;
+    font-size: 36px;
+    color: black;
+    font-weight: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    grid-area: Upper;
+    gap: 5rem; 
+    flex-wrap: wrap; 
+    min-height: fit-content; 
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.social-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    height: 6%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.social-footer .social-footer-icons ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 3rem; 
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+    margin-right: 0;
+}
+
+.social-footer .social-footer-icons .fa {
+    font-size: 1.3rem;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: red;
+    color: white;
+}
+
+.fa-tiktok {
+    color: #111111;
+    filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+}
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.carousel {
+    list-style-type: none;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.carousel-item.active{
+    opacity: 1;
+}
+
+.carousel-item > img, 
+.carousel-item > video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color:#333;
+    position: absolute;
+    top:50%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.carousel-btn.left {
+    left: -2.5rem;
+}
+
+.carousel-btn.right {
+    right: -2.5rem;
+}
+
+.carousel-btn:hover {
+    cursor: pointer;
+    background-color: #FD3E3E;
+}
+
+.carousel-nav {
+    display: flex;
+    margin-top: .7rem;
+    gap: .5rem;
+}
+
+.nav-item {
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: .3;
+}
+
+.nav-item.active{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.carousel-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+} 
+
+footer {
+    z-index: 6;
+}
+
+.search {
+    display:flex;
+    gap:1rem;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #151414; 
+}
+
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 100;
+    color:var(--primary-color);
+    font-size: 20px;
+}
+
+h4 {
+    align-items: center;
+    color: #848383;
+}
+
+.news-content {
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Page</title>
+    <link rel="stylesheet" href="css/styles-resources.css">
+    <link rel="icon" type="image/x-icon" href="images/game.png">
+    <script src="https://kit.fontawesome.com/806bf8b7df.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="head">
+        <h1><i class="fa-solid fa-a"></i> <i class="fa-solid fa-p"></i></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="container-content center-text">
+                <p>Enter a keyword to find the latest news on that keyword related to fifa 24. For example, entering in "tournaments" results the 
+                latest news/articles on fifa 24 tounaments. The default keyword is fifa 24.
+                </p>
+                <div class="search center-text">
+                    <input type="text" name="keyword" id="keyword" placeholder="keyword...">
+                    <button>Search</button> 
+                </div>
+                <article class="news-content"></article>
+                <p class="error-msg"></p>
+            </div>
+        </div>
+
+        <div class="container-left"></div>
+
+        <div class="container-right"></div>
+
+        
+        <div class="carousel-container">
+            <h1 class="center-text text">Most Recent Tutorials:</h1>
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+            <ul class="carousel">
+                
+                <li class="carousel-item active">
+                    <video playsinline="playsinline" class="carousel-video" controls width="1000" height="400">
+                        <source src="./images/Tactics.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+
+                <li class="carousel-item">
+                    <video playsinline="playsinline" class="carousel-video" controls width="1000" height="400">
+                        <source src="./images/video2.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+
+                <li class="carousel-item">
+                    <video playsinline="playsinline" class="carousel-video" controls width="1000" height="400">
+                        <source src="./images/video6.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>   
+                </li>
+
+                <li class="carousel-item">
+                    <video playsinline="playsinline" class="carousel-video" controls width="1000" height="400">
+                        <source src="./images/video4.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+
+            </ul>
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-nav">
+                <div class="nav-item active"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+            </div>
+        </div>
+    </main>    
+
+
+    <footer class="social-footer">
+        <div class="social-footer-left">
+        <a class="logo font-sm">&copy;Agit Power. All rights reserved</a>
+        </div>
+        <div class="social-footer-icons">
+            <ul class="menu simple">
+                <li><a href="https://www.tiktok.com/@agitpower"><i class="fab fa-tiktok fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/agitpowerr/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/agitpower?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
