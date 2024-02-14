@@ -54,7 +54,7 @@ function swipe(e) {
     navItems[currentIndex].classList.remove('active');
 }
 
-const api_key = 'cdc1f4dd3681e35a183d1620f15812dc';
+const api_key = '';
 let base_keyword = 'fifa 24'
 const base_url = `https://gnews.io/api/v4/search?q=${base_keyword}&apikey=${api_key}`
 
